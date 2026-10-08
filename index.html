@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GROUP 4 | Class Record Manager</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main>
+        <!-- HEADER-->
+        <header id="head-container">
+            <h2>Welcome to Group 4's Class Record Manager</h2>
+            <p><em>Manage your class list with ease</em></p>
+        </header>
+        <!-- CLASS LIST DISPLAY-->
+        <section id="list-container">
+            <section class="record-card">
+                <div class="class-list">
+                    <h2>Class List</h2>
+                    <div id="classList">
+                        <p id="arrayLength"></p>
+                        <ol id="students"></ol>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- BUTTONS AND INPUTS -->
+        <!-- Add Student -->
+        <section id="buttons-container">
+            <section class="record-card">
+                <h2>Add a Student</h2>
+                <p>Adds a new student to the list</p>
+                <div class="input-group">
+                    <input type="text" name="studentName" id="studentName" placeholder="Enter student name" />
+                    <button onclick="addStudent()" id="addBttn">Add</button>
+                </div>
+            </section>
+
+            <!-- Remove Student -->
+            <section class="record-card">
+                <h2>Remove a Student</h2>
+                <p>Removes the last student from the list</p>
+                <button onclick="removeLast()" id="removeBttn">Remove Last</button>
+            </section>
+
+            <!-- Find Student -->
+            <section class="record-card">
+                <h2>Find a student</h2>
+                <p>Find student by their index</p>
+
+                <div class="input-group">
+                    <input type="number" name="searchIndex" id="searchIndex" placeholder="Enter a number" />
+                    <button onclick="findByIndex()" id="findBttn">Find</button>
+                </div>
+            </section>
+
+            <!-- Join Students -->
+            <section class="record-card">
+                <h2>Join Students</h2>
+                <p>Displays all students in the list</p>
+                <button onclick="joinStudents()" id="joinBttn">Join Students</button>
+            </section>
+
+            <!-- Convert Array to String -->
+            <section class="record-card">
+                <h2>Convert Array to String</h2>
+                <p>Displays the converted array into its default string form</p>
+                <button onclick="convertToString()" id="convertBttn">
+                    Convert to String
+                </button>
+            </section>
+
+            <!-- Result Output -->
+            <section id="result-container" class="record-card">
+                <h2>Result:</h2>
+                <p id="results">No actions taken yet.</p>
+            </section>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2BSIT - B | GROUP 4 | GIMENO, REALIZAN, VALENZUELA</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
